@@ -39,7 +39,7 @@ GROQ_API_KEY=your_groq_api_key_here
 python app.py
 
 # Frontend (in new terminal)
-cd frontend
+cd client
 npm install
 npm start
 ```
