@@ -1,0 +1,14 @@
+# Ignore large library and binary files
+*.lib
+*.dll
+*.exe
+
+# Ignore Python cache and environment
+__pycache__/
+utils/__pycache__/
+*.py[cod]
+.env
+venv/
+
+# Ignore your IDE settings and local uploads/models
+.idea/
