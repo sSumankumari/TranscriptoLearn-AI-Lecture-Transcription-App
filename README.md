@@ -47,6 +47,10 @@ npm start
 
 Visit `http://localhost:3000`
 
+## Example YTvideo URLs
+- https://youtu.be/dcXqhMqhZUo?si=pZRpmWLvf5O6vr4v
+- https://youtu.be/pzo13OPXZS4?si=H3PW2wIZJk8RwG5Q
+
 ## Usage
 
 1. Paste a YouTube lecture video URL
