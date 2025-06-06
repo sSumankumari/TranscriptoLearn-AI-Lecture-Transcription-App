@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "TranscriptoLearn",
+  "name": "TranscriptoLearn - AI Learning Assistant",
+  "description": "AI-powered lecture video transcription and learning assistant",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#3b82f6",
+  "background_color": "#ffffff",
+  "categories": ["education", "productivity", "utilities"]
 }
