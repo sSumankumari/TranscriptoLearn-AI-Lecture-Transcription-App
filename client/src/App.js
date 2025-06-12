@@ -4,6 +4,7 @@ import NotesDisplay from './components/NotesDisplay';
 import ChatBot from './components/ChatBot';
 import Header from './components/Header';
 import LoadingSpinner from './components/LoadingSpinner';
+import { ExternalLink } from 'lucide-react'; // <-- Import the icon
 import './App.css';
 
 function App() {
@@ -57,16 +58,32 @@ function App() {
           <div className="mt-8 fade-in">
             {/* Video Info */}
             <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-2">
-                {videoData.video_info?.title || 'Video Title'}
-              </h2>
-              <div className="flex items-center text-gray-600 text-sm space-x-4">
-                <span>
-                  <strong>Duration:</strong> {formatTime(videoData.video_info?.duration)}
-                </span>
-                <span>
-                  <strong>Channel:</strong> {videoData.video_info?.uploader || 'Unknown'}
-                </span>
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-2">
+                    {videoData.video_info?.title || 'Video Title'}
+                  </h2>
+                  <div className="flex items-center text-gray-600 text-sm space-x-4">
+                    <span>
+                      <strong>Duration:</strong> {formatTime(videoData.video_info?.duration)}
+                    </span>
+                    <span>
+                      <strong>Channel:</strong> {videoData.video_info?.uploader || 'Unknown'}
+                    </span>
+                  </div>
+                </div>
+                {videoData.source_url && (
+                  <a
+                    href={videoData.source_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-blue-50 text-blue-700 border border-blue-200 font-semibold px-4 py-2 rounded hover:bg-blue-100 transition ml-4"
+                    style={{ whiteSpace: 'nowrap' }}
+                  >
+                    <ExternalLink size={18} className="mr-1" />
+                    Source Video
+                  </a>
+                )}
               </div>
             </div>
 
