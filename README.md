@@ -50,6 +50,9 @@ Visit `http://localhost:3000`
 ## Example YTvideo URLs
 - https://youtu.be/dcXqhMqhZUo?si=pZRpmWLvf5O6vr4v
 - https://youtu.be/pzo13OPXZS4?si=H3PW2wIZJk8RwG5Q
+- https://youtu.be/4-ylnyARFHE?si=Db7ZOS03eJ20NwO-
+- https://youtu.be/MdeQMVBuGgY?si=wrLx-G5NbXdbsVXM
+- https://youtu.be/XmgmUt1iFtE?si=QrAbi5HmlC7GUKLo
 
 ## Usage
 
