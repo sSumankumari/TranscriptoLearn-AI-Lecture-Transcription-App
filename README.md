@@ -1,66 +1,85 @@
 # TranscriptoLearn
 
-AI-powered lecture video transcription and learning assistant using GroqAPI and LLaMA 3.
+**TranscriptoLearn** is an intelligent learning assistant that transforms **YouTube educational videos** into structured **study materials** and **interactive Q&A experiences** using modern AI techniques. It leverages **Groq's LLaMA 3**, **FAISS**, and **SentenceTransformers** for fast, contextual learning.
+
+---
 
 ## Features
 
-- Extract transcripts from YouTube lecture videos
-- Generate AI-powered smart notes and summaries
-- Interactive Q&A chatbot for video content
-- Clean, structured note formatting
+- 🎬 **Smart Transcript Extraction** - Robust YouTube transcript retrieval with multi-language support
+- 🧠 **AI-Generated Study Materials** - Structured notes and summaries using LLaMA 3
+- 💬 **Interactive Q&A Chat** - Ask questions about video content with semantic search
+- 📱 **Responsive Web Interface** - Clean, modern UI built with React and Tailwind CSS
+- 🔍 **Vector Search** - FAISS-powered semantic search for accurate content retrieval
+- ⚡ **Fast Processing** - Groq API for lightning-fast AI responses
 
 ## Tech Stack
 
-- **Backend:** Flask, Groq API (LLaMA 3)
-- **Frontend:** React.js
-- **APIs:** YouTube Transcript API, yt-dlp
-- **AI:** LangChain, FAISS embeddings
+- **Flask** - Python web framework for API
+- **React 18** - Modern frontend with hooks
+- **Groq API** - LLaMA 3-8b-8192 model access
+- **FAISS** - Vector database for semantic search
+- **SentenceTransformers** - Text embeddings (all-MiniLM-L6-v2)
+- **YouTube Transcript API** - Transcript extraction
 
 ## Quick Start
 
-1. **Clone and setup**
+1. **Clone the repository**
 ```bash
 git clone https://github.com/your-username/TranscriptoLearn.git
 cd TranscriptoLearn
+```
+
+2. **Install dependencies**
+```bash
+# Backend setup
 python -m venv venv
-# Mac/Linux: source venv/bin/activate  
-venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
+
+# Frontend setup
+cd client && npm install && cd ..
 ```
 
-2. **Environment setup**
+3. **Set up environment**
 ```bash
-# Create .env file
-GROQ_API_KEY=your_groq_api_key_here
+# Create .env file and add your Groq API key
+echo "GROQ_API_KEY=your_groq_api_key_here" > .env
 ```
 
-3. **Run the application**
+4. **Run the application**
 ```bash
-# Backend
+# Start backend (Terminal 1)
 python app.py
 
-# Frontend (in new terminal)
-cd client
-npm install
-npm start
+# Start frontend (Terminal 2)
+cd client && npm start
 ```
+Visit `http://localhost:3000` to access the application.
 
-Visit `http://localhost:3000`
+## Usage
 
-## Example YTvideo URLs
+1. **Process Video** - Paste any YouTube lecture URL into the interface
+2. **AI Processing** - Wait 30-60 seconds for transcript extraction and AI analysis  
+3. **Study Materials** - Access generated notes, summaries, and full transcripts
+4. **Interactive Learning** - Ask questions via the Q&A chatbot with semantic search
+5. **Export Content** - Download materials for offline study
+
+### Example URLs for Testing
+```
 - https://youtu.be/dcXqhMqhZUo?si=pZRpmWLvf5O6vr4v
 - https://youtu.be/pzo13OPXZS4?si=H3PW2wIZJk8RwG5Q
 - https://youtu.be/4-ylnyARFHE?si=Db7ZOS03eJ20NwO-
 - https://youtu.be/MdeQMVBuGgY?si=wrLx-G5NbXdbsVXM
 - https://youtu.be/XmgmUt1iFtE?si=QrAbi5HmlC7GUKLo
+```
 
-## Usage
+## Requirements
 
-1. Paste a YouTube lecture video URL
-2. Get AI-generated notes and summary
-3. Ask questions about the content via chatbot
-4. Export notes for studying
+- Python 3.8+
+- Node.js 16+
+- Groq API key (free at [groq.com](https://groq.com))
 
 ## Conclusion
 
-TranscriptoLearn bridges the gap between passive video consumption and active learning by leveraging cutting-edge AI technology. By transforming lengthy lecture videos into structured notes and enabling interactive Q&A sessions, this tool empowers students and educators to maximize their learning efficiency. The integration of GroqAPI with LLaMA 3 ensures high-quality content processing, making complex educational material more accessible and engaging for learners of all levels.
+TranscriptoLearn bridges the gap between passive video consumption and active learning by leveraging cutting-edge AI technology. Transform lengthy lecture videos into structured notes and enable interactive Q&A sessions to maximize learning efficiency for students and educators alike.
